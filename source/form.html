@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile-header.png" width="191" height="39" alt="логотип кэт энерджи">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="логотип кэт энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -55,24 +56,24 @@
                 <input class="programs__radio-button" type="radio" name="programs" value="slim" checked>
               </label>
             </div>
-            <div>
+            <div class="programs__item">
               <label class="programs__label">Набор массы
                 <input class="programs__radio-button" type="radio" name="programs" value="weight">
               </label>
             </div>
-            <div>
+            <div class="programs__item">
               <label class="programs__label">Не знаю (Нужен ваш совет)
                 <input class="programs__radio-button" type="radio" name="programs" value="advice">
               </label>
             </div>
           </fieldset>
-          <fieldset form__user user>
-            <legend user__contacts>Контактные данные (владельца кота)</legend>
+          <fieldset class="form__user user">
+            <legend class="user__contacts">Контактные данные (владельца кота)</legend>
             <div class="user__item">
               <label class="user__label">E-mail:<sup>*</sup>
                 <input class="user__input" type="email" name="user-email" placeholder="kuklachev@gmail.com">
               </label>
-              <img src="img/mail.svg" width="18px" height="14px" alt="иконка письма">
+              <img class="user-image" src="img/mail.svg" width="18px" height="14px" alt="иконка письма">
             </div>
             <div class="user__item">
               <label class="user__label">Телефон:<sup>*</sup>
