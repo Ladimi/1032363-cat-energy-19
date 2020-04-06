@@ -32,12 +32,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: left;
-  color: #444444;
 }
 
 .example__item {
@@ -45,6 +39,11 @@
   margin-right: 16px;
 
   text-align: center;
+}
+
+.example__item:last-child {
+  margin-left: 16px;
+  margin-right: 20px;
 }
 
 .example__data {
@@ -56,17 +55,17 @@
 }
 
 .example__data:first-child {
-  padding-top: 17px;
-  padding-right: 43px;
-  padding-bottom: 18px;
-  padding-left: 44px;
+  padding-top: 16px;
+  padding-right: 42px;
+  padding-bottom: 17px;
+  padding-left: 43px;
 }
 
-.example__data:last-child {
-  padding-top: 13px;
-  padding-right: 23px;
-  padding-bottom: 15px;
-  padding-left: 23px;
+.example__item:last-child .example__data {
+  padding-top: 12px;
+  padding-right: 22px;
+  padding-bottom: 14px;
+  padding-left: 22px;
 }
 
 .example__result {
@@ -82,13 +81,13 @@
 .example__result:first-child {
   padding-top: 5px;
   padding-right: 17px;
-  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .example__result:last-child {
   padding-top: 5px;
   padding-right: 15px;
-  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .example__expenses {
@@ -96,7 +95,7 @@
   margin-top: 22px;
   margin-right: 66px;
   margin-bottom: 44px;
-  margin-left: 67px;
+  margin-left: 66px;
 
   font-size: 14px;
   line-height: 20px;
