@@ -1,4 +1,6 @@
 .product-list__item {
+  display: flex;
+  flex-wrap: wrap;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 25px;
@@ -6,12 +8,25 @@
 }
 
 .product-list__name {
+  padding-top: 25px;
+  padding-bottom: 18px;
+
   font-size: 16px;
   line-height: 20px;
   text-align: left;
   color: #111111;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: pre-line;
+}
+
+.product-list__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-list__list {
+  padding-bottom: 15px;
 }
 
 .product-list__options,
@@ -23,6 +38,7 @@
 }
 
 .product-list__options {
+  width: 88px;
   text-align: left;
 }
 
