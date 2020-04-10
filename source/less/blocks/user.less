@@ -1,0 +1,58 @@
+.user__contacts {
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  text-transform: none;
+  white-space: pre-line;
+}
+
+.user__contacts::after {
+  content: "";
+  display: block;
+  width: 99px;
+  height: 3px;
+  background-color: #68b738;
+  position: relative;
+  left: 200px;
+  top: -33px;
+}
+
+.user__input {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+
+  border: 1px solid #cdcdcd;
+  opacity: 0.5;
+}
+
+.user__item:first-child .user__input {
+  min-width: 219px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+}
+
+.user__item:last-child {
+  position: relative;
+}
+
+.user__item:last-child .user__image {
+  position: absolute;
+  top: 24px;
+  left: 257px;
+}
+
+.user__item:last-child .user__input {
+  min-width: 204px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  margin-top: 14px;
+}

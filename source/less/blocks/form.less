@@ -5,7 +5,11 @@
 .form__animal,
 .form__programs,
 .form__user,
+.form__comment,
 .form-extra {
+  margin: 0;
+  padding: 0;
+
   font-size: 16px;
   line-height: 18px;
   text-align: left;
@@ -14,50 +18,85 @@
   border: none;
 }
 
+.form__animal {
+  padding-left: 20px;
+  padding-bottom: 9px;
+}
+
+.form__programs {
+  padding-top: 20px;
+  padding-bottom: 7px;
+  border: 1px solid #ededed;
+}
+
+.form__user {
+  padding-left: 20px;
+}
+
 .form__comment {
+  padding-left: 20px;
   border: none;
 }
 
-.input[type="text"]::placeholder,
-.input[type="email"]::placeholder,
-.input[type="number"]::placeholder {
-  padding-left: 16px;
-  text-transform: uppercase;
-  color: #444444;
-}
-
-.animal__input,
-.user__input {
-  border: 1px solid #cdcdcd;
-  opacity: 0.5;
-}
-
-.animal__input:first-child {
-  min-width: 229px;
-}
-
-.animal__input:nth-child(2),
-.user__input:last-child {
-  min-width: 204px;
-}
-
-.animal__input:last-child {
-  min-width: 172px;
-}
-
-.user-input:first-child {
-  min-width: 219px;
-}
-
-.user__contacts,
-.comment__title,
 .form-extra {
+  padding-left: 20px;
+}
+
+.form-extra__title {
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 32px;
+
   font-size: 24px;
   line-height: 24px;
   text-align: left;
+  text-transform: none;
+}
+
+.form-extra__label {
+  display: flex;
+  align-items: center;
+  padding-bottom: 13px;
+
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.form-extra__label span {
+  padding-left: 16px;
+}
+
+.form-extra__label input {
+  display: none;
+}
+
+.form-extra__label::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+}
+
+.form-extra__title::after {
+  content: "";
+  display: block;
+  width: 136px;
+  height: 3px;
+  background-color: #68b738;
+  position: relative;
+  left: 161px;
+  top: -9px;
 }
 
 .form__required {
+  margin: 0;
+  padding-top: 23px;
+  padding-bottom: 34px;
+
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 11px;
@@ -66,6 +105,8 @@
 }
 
 .form__button {
+  margin-top: 34px;
+  margin-left: 20px;
   padding-top: 13px;
   padding-right: 77px;
   padding-bottom: 11px;
