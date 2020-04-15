@@ -32,24 +32,34 @@
   opacity: 0.5;
 }
 
-.user__item:first-child .user__input {
+.user__input--mail {
   min-width: 219px;
   padding-top: 15px;
   padding-bottom: 14px;
   padding-left: 16px;
 }
 
-.user__item:last-child {
+.user__item--mail {
   position: relative;
 }
 
-.user__item:last-child .user__image {
+.user__item--mail .user__image {
+  position: absolute;
+  top: 17px;
+  left: 256px;
+}
+
+.user__item--phone {
+  position: relative;
+}
+
+.user__item--phone .user__image {
   position: absolute;
   top: 24px;
   left: 257px;
 }
 
-.user__item:last-child .user__input {
+.user__input--phone {
   min-width: 204px;
   padding-top: 15px;
   padding-bottom: 12px;

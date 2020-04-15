@@ -1,5 +1,8 @@
 .index {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   margin-bottom: 135px;
 
   width: 320px;
@@ -35,7 +38,70 @@
 }
 
 .index__image {
-  position: absolute;
-  left: 20px;
-  top: 170px;
+  padding-top: 32px;
+}
+
+.index .index__button {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 3px;
+  padding-top: 14px;
+  padding-right: 73px;
+  padding-bottom: 11px;
+  padding-left: 73px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+@media (min-width: 768px) {
+  .index {
+    align-items: flex-start;
+    width: 709px;
+    background-image: none;
+    background-color: #ffffff;
+  }
+
+  .index__title {
+    padding-top: 0;
+    padding-right: 135px;
+    padding-left: 90px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: #111111;
+  }
+
+  .index__description {
+    margin-top: 30px;
+    padding-left: 88px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: #111111;
+  }
+
+  .index .index__button {
+    margin-top: -267px;
+    margin-left: 89px;
+
+    padding-top: 17px;
+    padding-right: 29px;
+    padding-bottom: 15px;
+    padding-left: 26px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .index {
+    width: 1440px;
+  }
 }
