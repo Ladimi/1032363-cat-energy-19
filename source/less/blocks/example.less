@@ -1,4 +1,6 @@
 .example {
+  display: flex;
+  flex-direction: column;
   margin-top: 40px;
 
   background-color: #f2f2f2;
@@ -48,6 +50,8 @@
 }
 
 .example__data {
+  position: relative;
+
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -55,37 +59,50 @@
   border: 1px solid #cdcdcd;
 }
 
-.example__data:first-child {
-  padding-top: 16px;
-  padding-right: 42px;
-  padding-bottom: 17px;
-  padding-left: 43px;
+.example__data--weight {
+  padding-top: 15px;
+  padding-right: 40px;
+  padding-bottom: 15px;
+  padding-left: 40px;
 }
 
-.example__item:last-child .example__data {
-  padding-top: 12px;
+.example__data--day {
+  padding-top: 14px;
   padding-right: 22px;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
   padding-left: 22px;
 }
 
+.example__list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .example__result {
+  position: absolute;
+
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
+  text-transform: none;
   color: #444444;
-  white-space: pre;
 
   background-color: #f2f2f2;
 }
 
-.example__result:first-child {
+.example__result--weight {
+  top: 43px;
+  left: 14px;
+
   padding-top: 5px;
   padding-right: 17px;
   padding-left: 16px;
 }
 
-.example__result:last-child {
+.examle__result--day {
+  top: 43px;
+  left: 18px;
+
   padding-top: 5px;
   padding-right: 15px;
   padding-left: 15px;
@@ -93,7 +110,7 @@
 
 .example__expenses {
   margin: 0;
-  margin-top: 22px;
+  margin-top: 38px;
   margin-right: 66px;
   margin-bottom: 44px;
   margin-left: 66px;
@@ -143,4 +160,58 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .example__list-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .example__expenses {
+    white-space: pre-line;
+    margin-top: 0;
+    margin-right: 30px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .example__data {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__data--weight {
+    padding-top: 22px;
+    padding-right: 57px;
+    padding-bottom: 24px;
+    padding-left: 58px;
+  }
+
+  .example__data--day {
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 20px;
+    padding-left: 31px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .example {
+    display: flex;
+    flex-direction: row;
+    padding-left: 111px;
+    padding-right: 111px;
+  }
+
+  .example__list-wrapper {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .example__expenses {
+    white-space: normal;
+  }
 }
