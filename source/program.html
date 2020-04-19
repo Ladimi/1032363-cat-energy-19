@@ -8,25 +8,25 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="логотип кэт энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="main-nav__span">Открыть меню<span></button>
-        <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="логотип кэт энерджи">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button"><span class="main-nav__span">Открыть меню<span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link site-list__link--first" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="site-list__link site-list__link--two" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a>Подбор программы</a>
+              <a class="site-list__link site-list__link--three">Подбор программы</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="selection-title">Подбор программы</h1>
@@ -34,56 +34,60 @@
         программу питания для вашего кота</p>
       <section class="form">
         <form class="form__selection" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__animal animal">
-            <div class="animal__item">
-              <label class="animal__label">имя:<sup>*</sup>
-                <input class="animal__input" type="text" name="animal-name" placeholder="Барсик">
-              </label>
-            </div>
-            <div class="animal__item">
-              <label class="animal__label">вес(кг):<sup>*</sup>
-                <input class="animal__input" type="number" name="animal-weight" placeholder="7">
-              </label>
-            </div>
-            <div class="animal__item">
-              <label class="animal__label">возраст(лет):
-                <input class="animal__input" type="number" name="animal-age" placeholder="7">
-              </label>
-            </div>
-          </fieldset>
-          <fieldset class="form__programs programs">
-            <div class="programs__item">
-              <label class="programs__label"><span>Похудение</span>
-                <input class="programs__radio-button" type="radio" name="programs" value="slim" checked>
-              </label>
-            </div>
-            <div class="programs__item">
-              <label class="programs__label"><span>Набор массы</span>
-                <input class="programs__radio-button" type="radio" name="programs" value="weight">
-              </label>
-            </div>
-            <div class="programs__item">
-              <label class="programs__label"><span>Не знаю (Нужен ваш совет)</span>
-                <input class="programs__radio-button" type="radio" name="programs" value="advice">
-              </label>
-            </div>
-          </fieldset>
+          <div class="form-wrapper">
+            <fieldset class="form__animal animal">
+              <div class="animal__item">
+                <label class="animal__label">имя:<sup>*</sup>
+                  <input class="animal__input" type="text" name="animal-name" placeholder="Барсик">
+                </label>
+              </div>
+              <div class="animal__item">
+                <label class="animal__label">вес(кг):<sup>*</sup>
+                  <input class="animal__input" type="number" name="animal-weight" placeholder="7">
+                </label>
+              </div>
+              <div class="animal__item">
+                <label class="animal__label">возраст(лет):
+                  <input class="animal__input" type="number" name="animal-age" placeholder="7">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__programs programs">
+              <div class="programs__item">
+                <label class="programs__label"><span>Похудение</span>
+                  <input class="programs__radio-button" type="radio" name="programs" value="slim" checked>
+                </label>
+              </div>
+              <div class="programs__item">
+                <label class="programs__label"><span>Набор массы</span>
+                  <input class="programs__radio-button" type="radio" name="programs" value="weight">
+                </label>
+              </div>
+              <div class="programs__item">
+                <label class="programs__label"><span>Не знаю (Нужен ваш совет)</span>
+                  <input class="programs__radio-button" type="radio" name="programs" value="advice">
+                </label>
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="form__user user">
             <legend class="user__contacts">
               Контактные данные
               (владельца кота)
             </legend>
-            <div class="user__item user__item--mail">
-              <label class="user__label">E-mail:<sup>*</sup>
-                <input class="user__input user__input--mail" type="email" name="user-email" placeholder="kuklachev@gmail.com">
-              </label>
-              <img class="user__image" src="img/icon-mail.svg" width="18px" height="14px" alt="иконка письма">
-            </div>
-            <div class="user__item user__item--phone">
-              <label class="user__label">Телефон:<sup>*</sup>
-                <input class="user__input user__input--phone" type="number" name="user-phone" placeholder="8 (960) 900-60-90">
-              </label>
-              <img class="user__image" src="img/icon-phone.svg" width="21px" height="21px" alt="иконка телефона">
+            <div class="user__wrapper">
+              <div class="user__item user__item--mail">
+                <label class="user__label">E-mail:<sup>*</sup>
+                  <input class="user__input user__input--mail" type="email" name="user-email" placeholder="kuklachev@gmail.com">
+                </label>
+                <img class="user__image" src="img/icon-mail.svg" width="18px" height="14px" alt="иконка письма">
+              </div>
+              <div class="user__item user__item--phone">
+                <label class="user__label">Телефон:<sup>*</sup>
+                  <input class="user__input user__input--phone" type="number" name="user-phone" placeholder="8 (960) 900-60-90">
+                </label>
+                <img class="user__image" src="img/icon-phone.svg" width="21px" height="21px" alt="иконка телефона">
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__comment comment">
@@ -92,29 +96,33 @@
           </fieldset>
           <fieldset class="form-extra">
             <legend class="form-extra__title">Дополнительно</legend>
-            <div class=form-extra__item>
-              <label class="form-extra__label"><span>Сахарозаменитель</span>
-                <input class="form-extra__checkbox-button" type="checkbox" name="sweet" checked>
-              </label>
-            </div>
-            <div class=form-extra__item>
-              <label class="form-extra__label"><span>Питьевая вода</span>
-                <input class="form-extra__checkbox-button" type="checkbox" name="water">
-              </label>
-            </div>
-            <div class=form-extra__item>
-              <label class="form-extra__label"><span>Молоко</span>
-                <input class="extra__checkbox-button" type="checkbox" name="milk">
-              </label>
-            </div>
-            <div class=form-extra__item>
-              <label class="form-extra__label"><span>Витамины</span>
-                <input class="form-extra__checkbox-button" type="checkbox" name="vitamins">
-              </label>
+            <div class="form-extra__wrapper">
+              <div class=form-extra__item>
+                <label class="form-extra__label"><span>Сахарозаменитель</span>
+                  <input class="form-extra__checkbox-button" type="checkbox" name="sweet" checked>
+                </label>
+              </div>
+              <div class=form-extra__item>
+                <label class="form-extra__label"><span>Питьевая вода</span>
+                  <input class="form-extra__checkbox-button" type="checkbox" name="water">
+                </label>
+              </div>
+              <div class=form-extra__item>
+                <label class="form-extra__label"><span>Молоко</span>
+                  <input class="extra__checkbox-button" type="checkbox" name="milk">
+                </label>
+              </div>
+              <div class=form-extra__item>
+                <label class="form-extra__label"><span>Витамины</span>
+                  <input class="form-extra__checkbox-button" type="checkbox" name="vitamins">
+                </label>
+              </div>
             </div>
           </fieldset>
-        <button class="form__button button" type="submit">Отправить заявку</button>
-        <p class="form__required"><sup>*</sup> — Обязательные поля</p>
+          <div class="form__button-wrapper">
+            <button class="form__button button" type="submit">Отправить заявку</button>
+            <p class="form__required"><sup>*</sup> — Обязательные поля</p>
+          </div>
       </form>
       </section>
     </main>
