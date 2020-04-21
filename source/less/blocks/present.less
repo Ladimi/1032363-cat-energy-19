@@ -26,11 +26,19 @@
   color: #ffffff;
 }
 
-.present__image {
-  position: absolute;
-  top: -35%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.present__description::before {
+  content: "";
+  width: 56px;
+  height: 61px;
+  background-image: url("../img/icon-gift.svg");
+  background-size: 56px 61px;
+}
+
+@media (min-width: 768px) {
+  .present {
+    margin-top: 69px;
+    margin-right: 0;
+    margin-bottom: 76px;
+    margin-left: 0;
+  }
 }
