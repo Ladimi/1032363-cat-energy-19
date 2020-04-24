@@ -5,6 +5,22 @@
     <title>Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </head>
   <body>
     <header class="page-header">
@@ -12,19 +28,21 @@
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="логотип кэт энерджи">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню<span></button>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link site-list__link--first">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--two" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--three" href="program.html">Подбор программы</a>
-            </li>
-          </ul>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list site-list">
+                <li class="site-list__item site-list__item--active">
+                  <a class="site-list__link site-list__link--first">Главная</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link site-list__link--two" href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link site-list__link--three" href="program.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
         </nav>
       </div>
     </header>
@@ -126,16 +144,19 @@
                 </div>
               </li>
             </ul>
-            <p class="example__expenses">
-              затраты на питание:
-              15 000 РУБ.</p>
+            <div class="example__expenses">
+              <p>затраты на питание:</p>
+              <p>15 000 РУБ.</p>
+            </div>
           </div>
         </div>
         <div class="example__range-wrapper">
           <img class="example__image" src="img/before-mobile@1x.png" width="311" height="232" alt="толстый кот">
           <div class="example__range">
+
             <div class="example__before-after">было</div>
             <div class="example__ellipse-green"></div>
+
             <div class="example__ellipse-white"></div>
             <div class="example__before-after">стало</div>
           </div>
@@ -159,25 +180,27 @@
       </section>
     </main>
       <footer class="page-footer">
-        <a class="page-footer__logo">
-          <img src="img/logo-footer.svg" width="128" height="24" alt="логотип кэт энерджи">
-        </a>
-        <div class="page-footer__social social">
-          <a class="social__vk">
-            <img src="img/icon-vk.svg" width="22" height="12" alt="мы в контакте">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo">
+            <img src="img/logo-footer.svg" width="128" height="24" alt="логотип кэт энерджи">
           </a>
-          <a class="social__insta">
-            <img src="img/icon-insta.svg" width="17" height="17" alt="мы в инстаграмм">
-          </a>
-          <a class="social__fb">
-            <img src="img/icon-fb.svg" width="10" height="19" alt="мы в фэйсбук">
-          </a>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <p class="copyright__text">HTML Academy</p>
-          <a href="https://htmlacademy.ru" class="copyright__link">
-            <img src="img/htmlacademy.svg" width="27px" height="34px" alt="логотип htmlacademy">
-          </a>
+          <div class="page-footer__social social">
+            <a class="social__vk">
+              <img src="img/icon-vk.svg" width="22" height="12" alt="мы в контакте">
+            </a>
+            <a class="social__insta">
+              <img src="img/icon-insta.svg" width="17" height="17" alt="мы в инстаграмм">
+            </a>
+            <a class="social__fb">
+              <img src="img/icon-fb.svg" width="10" height="19" alt="мы в фэйсбук">
+            </a>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <p class="copyright__text">HTML Academy</p>
+            <a href="https://htmlacademy.ru" class="copyright__link">
+              <img src="img/htmlacademy.svg" width="27" height="34" alt="логотип htmlacademy">
+            </a>
+          </div>
         </div>
       </footer>
   </body>

@@ -1,14 +1,18 @@
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  padding-bottom: 346px;
+
+  width: 320px;
 }
 
 .contacts__list {
   display: flex;
   justify-content: space-between;
-  padding-top: 31px;
+  padding-top: 28px;
   padding-bottom: 26px;
+  z-index: 1;
 }
 
 .contacts__list--white {
@@ -33,6 +37,15 @@
   line-height: 20px;
   text-align: left;
   color: #444444;
+}
+
+.contacts__image img {
+  position: absolute;
+  z-index: -1;
+  top: 76px;
+
+  width: 320px;
+  height: 400px;
 }
 
 @media (min-width: 768px) {

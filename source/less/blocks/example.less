@@ -1,15 +1,16 @@
 .example {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  padding-bottom: 35px;
+  margin-top: 23px;
 
   background-color: #f2f2f2;
 }
 
 .example__title {
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: 33px;
+  margin-top: 16px;
+  margin-bottom: 24px;
   margin-left: 20px;
 
   font-size: 36px;
@@ -20,7 +21,7 @@
 
 .example__description {
   margin-right: 34px;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   margin-left: 20px;
 
   font-family: "Arial", sans-serif;
@@ -39,14 +40,15 @@
 
 .example__item {
   margin-left: 20px;
-  margin-right: 16px;
+  margin-right: 20px;
+
+  width: 124px;
 
   text-align: center;
 }
 
 .example__item:last-child {
-  margin-left: 16px;
-  margin-right: 20px;
+  margin-left: 12px;
 }
 
 .example__data {
@@ -60,22 +62,20 @@
 }
 
 .example__data--weight {
-  padding-top: 15px;
-  padding-right: 40px;
-  padding-bottom: 15px;
-  padding-left: 40px;
+  padding-top: 13px;
+  padding-bottom: 17px;
 }
 
 .example__data--day {
-  padding-top: 14px;
-  padding-right: 22px;
-  padding-bottom: 16px;
-  padding-left: 22px;
+  padding-top: 13px;
+  padding-bottom: 17px;
 }
 
 .example__list-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .example__result {
@@ -91,31 +91,28 @@
 }
 
 .example__result--weight {
-  top: 45px;
-  left: 16px;
-
-  padding-right: 17px;
-  padding-left: 16px;
+  top: 46px;
+  left: 34px;
 
   width: 54px;
+
+  text-align: center;
 }
 
 .examle__result--day {
   top: 46px;
-  left: 21px;
-
-  padding-right: 15px;
-  padding-left: 15px;
+  left: 33px;
 
   width: 57px;
+
+  text-align: center;
 }
 
 .example__expenses {
+  display: flex;
   margin: 0;
-  margin-top: 38px;
-  margin-right: 66px;
-  margin-bottom: 44px;
-  margin-left: 66px;
+  margin-top: 20px;
+  margin-bottom: 21px;
 
   font-size: 14px;
   line-height: 20px;
@@ -123,8 +120,15 @@
   text-transform: uppercase;
 }
 
+.example__expenses p:last-child {
+  margin-left: 3px;
+}
+
 .example__image {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
+
+  width: 318px;
+  height: 239px;
 }
 
 .example__range {
@@ -135,8 +139,8 @@
 
 .example__ellipse-green {
   position: absolute;
-  left: 62px;
-  top: 4px;
+  left: 61px;
+  top: 6px;
 
   width: 35px;
   height: 6px;
@@ -146,8 +150,8 @@
 }
 
 .example__ellipse-white {
+  margin-top: 3px;
   margin-right: 18px;
-  margin-bottom: 39px;
   margin-left: 19px;
 
   width: 83px;
@@ -200,13 +204,23 @@
   }
 
   .example__expenses {
-    white-space: pre-line;
+    display: flex;
+    flex-direction: column;
     margin-top: 0;
     margin-right: 0;
 
     font-size: 20px;
     line-height: 20px;
     text-align: right;
+    white-space: pre-line;
+  }
+
+  .example__expenses p:last-child {
+    margin-top: 9px;
+  }
+
+  .example__expenses p:first-child {
+    margin-bottom: 0;
   }
 
   .example__data {
@@ -335,9 +349,18 @@
   }
 
   .example__expenses {
+    display: flex;
+    flex-direction: row;
     margin-left: 0;
+  }
 
-    white-space: normal;
+  .example__expenses p {
+    margin-top: 0;
+  }
+
+  .example__expenses p:last-child {
+    margin-top: 0;
+    margin-left: 64px;
   }
 
   .example__range-wrapper {
