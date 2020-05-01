@@ -5,22 +5,6 @@
     <title>Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
   </head>
   <body>
     <header class="page-header">
@@ -54,7 +38,11 @@
       <section class="index">
         <h1 class="index__title">Функциональное питание для котов</h1>
         <p class="index__description">занялся собой? займись котом!</p>
-        <img class="index__image" src="img/index-can-mobile@1x.png" width="280px" height="270px" alt="Функциональное питание Cat energy pro вкус курица">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img class="index__image" src="img/index-can-mobile@1x.png" width="280px" height="270px" alt="Функциональное питание Cat energy pro вкус курица">
+        </picture>
         <a class="index__button button" href="program.html">Подобрать программу</a>
       </section>
       <section class="type">
@@ -155,15 +143,11 @@
           </div>
         </div>
         <div class="example__range-wrapper">
-          <div class="example__image-wrapper">
-          <div class="example__image--fat">
-            <img src="img/before-tablet@1x.png" width="338" height="499">
-          </div>
-          <div class="example__image--slim">
-            <img src="img/after-tablet@1x.png" width="298" height="517">
-          </div>
-          </div>
-          <img class="example__image" src="img/before-mobile@1x.png" width="311" height="232" alt="толстый кот">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+            <img class="example__image" src="img/before-mobile@1x.png" width="311" height="232" alt="толстый кот">
+          </picture>
           <div class="example__range">
             <div class="example__before-after">было</div>
             <div class="example__ellipse-green"></div>
@@ -181,7 +165,6 @@
           <address class="contacts__address">
             ул. Большая
             Конюшенная, д. 19/8
-
             Санкт-Петербург
           </address>
         </div>
@@ -219,4 +202,20 @@
         </div>
       </footer>
   </body>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </html>

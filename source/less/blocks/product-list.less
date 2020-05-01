@@ -7,14 +7,22 @@
   display: flex;
   flex-wrap: wrap;
   padding-left: 17px;
-  padding-right: 18px;
-  padding-bottom: 25px;
+  padding-right: 15px;
+  padding-bottom: 24px;
   border: 1px solid #ededed;
 }
 
+.product-list__image {
+  margin-left: 3px;
+
+  width: 140px;
+  height: 144px;
+}
+
 .product-list__name {
+  margin-top: -4px;
   padding-top: 25px;
-  padding-bottom: 18px;
+  padding-bottom: 6px;
 
   font-size: 16px;
   line-height: 20px;
@@ -31,7 +39,8 @@
 }
 
 .product-list__list {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+  margin-left: -3px;
 }
 
 .product-list__options,
@@ -43,7 +52,7 @@
 }
 
 .product-list__options {
-  width: 88px;
+  width: 97px;
   text-align: left;
 }
 
@@ -51,11 +60,20 @@
   text-align: right;
 }
 
+.product-list__value--fish {
+  padding-left: 13px;
+}
+
+.product-list__value--rice {
+  padding-left: 13px;
+}
+
 .product-list__button {
-  padding-top: 13px;
-  padding-right: 108px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-right: 107px;
+  padding-bottom: 10px;
   padding-left: 111px;
+  margin-left: 3px;
 
   text-decoration: none;
 }
@@ -93,6 +111,11 @@
 
   .product-list__image {
     margin-top: -65px;
+  }
+
+  .product-list__image img {
+    width: 161px;
+    height: 172px;
   }
 
   .product-list__name {
