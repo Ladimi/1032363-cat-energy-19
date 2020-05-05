@@ -64,15 +64,15 @@
 
     border-top: none;
   }
-}
 
-.site-list__link--first {
-  padding-top: 17px;
-}
+  .site-list__link--first {
+    padding-top: 17px;
+  }
 
-.site-list__link--three {
-  padding-right: 5px;
-  padding-left: 2px;
+  .site-list__link--three {
+    margin-right: 5px;
+    margin-left: 2px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -84,21 +84,26 @@
     color: #ffffff;
   }
 
+  .site-list__item--active::after {
+    left: -5px;
+  }
+
   .site-list__link {
     border-top: none;
   }
 
   .site-list__link--first {
-    margin-left: -8px;
+    margin-left: -11px;
     margin-top: 2px;
   }
 
   .site-list__link--two {
     margin-top: 1px;
-    margin-right: -4px;
+    margin-right: -2px;
   }
 
   .site-list__link--three {
+    margin-right: 11px;
     margin-top: 1px;
   }
 }

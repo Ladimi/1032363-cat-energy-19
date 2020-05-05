@@ -26,15 +26,15 @@
 .form__animal {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 19px;
   padding-bottom: 9px;
 }
 
 .form__programs {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 7px;
+  padding-top: 19px;
+  padding-bottom: 10px;
   border: 1px solid #ededed;
 }
 
@@ -62,8 +62,8 @@
 
 .form-extra__title {
   padding: 0;
-  padding-top: 30px;
-  padding-bottom: 32px;
+  padding-top: 28px;
+  padding-bottom: 30px;
 
   font-size: 24px;
   line-height: 24px;
@@ -71,10 +71,21 @@
   text-transform: none;
 }
 
+.form-extra__title::after {
+  content: "";
+  display: block;
+  width: 136px;
+  height: 3px;
+  background-color: #68b738;
+  position: relative;
+  left: 163px;
+  top: -11px;
+}
+
 .form-extra__label {
   display: flex;
   align-items: center;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 
   font-size: 16px;
   line-height: 18px;
@@ -93,26 +104,32 @@
 
 .form-extra__label::before {
   content: "";
+
   display: inline-block;
+
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
 }
 
-.form-extra__title::after {
+.form-extra__item:first-child .form-extra__label::before {
   content: "";
-  display: block;
-  width: 136px;
-  height: 3px;
-  background-color: #68b738;
-  position: relative;
-  left: 161px;
-  top: -9px;
+
+  display: inline-block;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+
+  background-image: url("../img/icon-tick.svg");
+  background-size: 22px 17px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .form__required {
   margin: 0;
-  padding-top: 23px;
+  padding-top: 20px;
   padding-bottom: 34px;
 
   font-family: "Arial", sans-serif;
@@ -128,12 +145,13 @@
 }
 
 .form__button {
-  margin-top: 34px;
+  margin-top: 25px;
+  margin-right: 20px;
   margin-left: 20px;
-  padding-top: 13px;
+  padding-top: 8px;
   padding-right: 77px;
-  padding-bottom: 11px;
-  padding-left: 80px;
+  padding-bottom: 10px;
+  padding-left: 78px;
 
   border: none;
 }
@@ -149,15 +167,15 @@
   }
 
   .form__animal {
-    padding-top: 40px;
-    padding-right: 67px;
-    padding-bottom: 72px;
-    padding-left: 72px;
+    padding-top: 24px;
+    padding-right: 63px;
+    padding-bottom: 54px;
+    padding-left: 74px;
   }
 
   .form__user {
     padding-left: 0;
-    margin-bottom: 69px;
+    margin-bottom: 64px;
   }
 
   .form__comment,
@@ -167,33 +185,31 @@
 
   .form__programs {
     margin-right: 67px;
-    margin-bottom: 79px;
-    margin-left: 71px;
+    margin-bottom: 76px;
+    margin-left: 73px;
     padding-left: 28px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    width: 602px;
+    padding-top: 23px;
+    padding-bottom: 12px;
+    width: 600px;
   }
 
   .form-extra__wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: 70px;
-    margin-top: 53px;
-    margin-bottom: 54px;
+    margin-left: 72px;
+    margin-top: 58px;
+    margin-bottom: 23px;
   }
 
   .form-extra__item {
-    min-width: 212px;
-    margin-right: 125px;
+    min-width: 343px;
   }
 
   .form-extra__title {
     position: relative;
     z-index: 0;
-    margin-left: 69px;
+    margin-left: 30px;
     padding-top: 0;
     padding-bottom: 0;
 
@@ -203,8 +219,8 @@
 
   .form-extra__title div {
     background-color: #ffffff;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 42px;
+    padding-left: 42px;
   }
 
   .form-extra__title::after {
@@ -214,25 +230,39 @@
     height: 3px;
     background-color: #68b738;
     position: absolute;
-    left: -68px;
-    top: 21px;
+    left: -27px;
+    top: 22px;
     z-index: -1;
   }
 
   .form-extra__label {
-    margin-bottom: 32px;
+    margin-top: -1px;
+    margin-bottom: 30px;
     padding-bottom: 0;
 
     font-size: 20px;
     line-height: 20px;
   }
 
+  .form-extra__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form-extra__item:first-child .form-extra__label::before {
+    width: 40px;
+    height: 40px;
+
+    background-size: 21px 16px;
+  }
+
   .form-extra__label span {
-    padding-left: 19px;
+    padding-left: 17px;
   }
 
   .form__required {
-    margin-left: 61px;
+    margin-top: -7px;
+    margin-left: 41px;
     padding-top: 0;
     padding-bottom: 0;
 
@@ -241,11 +271,12 @@
   }
 
   .form__button {
-    padding-top: 17px;
+    padding-top: 16px;
     padding-right: 67px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     padding-left: 63px;
     margin-top: 0;
+    margin-left: 23px;
 
     font-size: 20px;
     line-height: 20px;
@@ -256,7 +287,7 @@
     flex-direction: row;
     align-items: center;
     margin-left: 51px;
-    margin-bottom: 72px;
+    margin-bottom: 89px;
   }
 }
 
@@ -266,7 +297,7 @@
     flex-direction: row;
     margin-left: 112px;
     margin-right: 110px;
-    margin-bottom: 73px;
+    margin-bottom: 52px;
   }
 
   .form__animal {
@@ -279,26 +310,51 @@
     margin: 0;
   }
 
+  .form__user {
+    margin-bottom: 66px;
+  }
+
   .form-extra__wrapper {
+    margin-bottom: 29px;
     margin-left: 110px;
   }
 
   .form-extra__item {
-    margin-right: 120px;
+    margin-right: 107px;
+
+    min-width: 0;
+  }
+
+  .form-extra__item--sweetener {
+    margin-right: 138px;
+  }
+
+  .form-extra__item--milk {
+    margin-right: 197px;
+  }
+
+  .form-extra__title {
+    margin-left: 69px;
   }
 
   .form-extra__title::after {
+    left: -67px;
+
     width: 1440px;
   }
 
   .form__button-wrapper {
     margin-left: 111px;
-    margin-bottom: 82px;
+    margin-bottom: 110px;
   }
 
   .form__button {
     padding-right: 206px;
     padding-left: 209px;
     margin-left: 0;
+  }
+
+  .form__required {
+    margin-left: 64px;
   }
 }

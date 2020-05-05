@@ -1,10 +1,10 @@
 .present {
   position: relative;
-  height: 289px;
-  margin-top: 39px;
+  margin-top: 37px;
   margin-right: 20px;
   margin-bottom: 35px;
   margin-left: 20px;
+  padding-bottom: 289px;
 
   background-image: url("/img/gift-photo-mobile@1x.jpg");
   background-size: 280px 289px;
@@ -42,9 +42,26 @@
 @media (min-width: 768px) {
   .present {
     margin-top: 69px;
-    margin-right: 0;
-    margin-bottom: 76px;
-    margin-left: 0;
+    margin-right: 28px;
+    margin-bottom: 94px;
+    margin-left: 33px;
+    padding-bottom: 200px;
+
+    background-image: url("/img/gift-photo-tablet@1x.jpg");
+    background-size: 708px 200px;
+    background-repeat: no-repeat;
+    background-color: #68b738;
+  }
+
+  .present__description {
+    top: -111px;
+    left: 54%;
+    text-align: left;
+  }
+
+  .present__description::before {
+    top: 176px;
+    left: -291px;
   }
 }
 
@@ -52,21 +69,21 @@
   .present {
     width: 245px;
     margin: 0;
-    margin-top: 110px;
+    margin-top: 119px;
+
+    background-image: url("/img/gift-photo-desktop@1x.jpg");
+    background-size:245px 289px;
+    background-repeat: no-repeat;
+  }
+
+  .present__description {
+    top: 0px;
+    left: 0px;
+    text-align: center;
   }
 
   .present__description::before {
-    content: "";
-
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 80px;
-
-    width: 56px;
-    height: 61px;
-
-    background-image: url("../img/icon-gift.svg");
-    background-size: 56px 61px;
+    top: 65px;
+    left: 93px;
   }
 }

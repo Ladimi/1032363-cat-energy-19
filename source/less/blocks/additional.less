@@ -1,13 +1,24 @@
 .additional__headline {
   margin: 0;
   padding-top: 29px;
-  padding-bottom: 34px;
+  padding-bottom: 30px;
   padding-left: 20px;
 
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   text-align: left;
+}
+
+.additional__headline::after {
+  content: "";
+  display: block;
+  width: 53px;
+  height: 3px;
+  background-color: #68b738;
+  position: relative;
+  left: 247px;
+  top: -11px;
 }
 
 .additional__wrapper {
@@ -53,14 +64,35 @@
 }
 
 @media (min-width: 768px) {
-  .additional {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   .additional__headline {
+    margin-bottom: 46px;
+    padding-top: 64px;
+    padding-left: 71px;
+
     font-size: 36px;
     line-height: 36px;
+  }
+
+  .additional__headline::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 3px;
+    background-color: #68b738;
+    position: relative;
+    left: -67px;
+    top: 23px;
+  }
+
+  .additional__headline::after {
+    content: "";
+    display: block;
+    width: 324px;
+    height: 3px;
+    background-color: #68b738;
+    position: relative;
+    left: 374px;
+    top: -14px;
   }
 
   .additional__wrapper {
@@ -68,10 +100,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
+    padding-top: 18px;
     padding-left: 38px;
+    padding-bottom: 27px;
     padding-right: 37px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 34px;
+    margin-right: 26px;
     border: 1px solid #e7e7e7;
   }
 
@@ -87,8 +121,10 @@
   }
 
   .additional__button {
+    padding-top: 13px;
     padding-left: 285px;
     padding-right: 287px;
+    padding-bottom: 8px;
   }
 }
 
@@ -96,8 +132,9 @@
   .additional__wrapper-first {
     display: flex;
     justify-content: space-between;
+    margin-top: 65px;
     padding-right: 110px;
-    padding-bottom: 86px;
+    padding-bottom: 112px;
     padding-left: 110px;
   }
 
@@ -107,10 +144,24 @@
   }
 
   .additional__headline {
-    margin-bottom: 75px;
+    margin-bottom: 77px;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
+  }
+
+  .additional__headline::before {
+    width: 70px;
+
+    left: -109px;
+    top: 25px;
+  }
+
+  .additional__headline::after {
+    width: 955px;
+
+    left: 374px;
+    top: -14px;
   }
 
   .additional__button {
@@ -119,6 +170,7 @@
   }
 
   .additional__wrapper {
+    margin-left: 0;
     padding: 0;
 
     width: 895px;
@@ -127,6 +179,39 @@
   }
 
   .additional__title {
+    margin-top: 25px;
     padding-right: 0;
+  }
+
+  .additional__options--sweetener {
+    margin-left: 129px;
+  }
+
+  .additional__options--water {
+    margin-left: 152px;
+  }
+
+  .additional__options--milk {
+    margin-left: 218px;
+  }
+
+  .additional__options--vitamins {
+    margin-left: 200px;
+  }
+
+  .additional__volume--sweetener {
+    margin-right: 66px;
+  }
+
+  .additional__volume--water {
+    margin-right: 128px;
+  }
+
+  .additional__volume--milk {
+    margin-right: 147px;
+  }
+
+  .additional__volume--vitamins {
+    margin-right: 74px;
   }
 }

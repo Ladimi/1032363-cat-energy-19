@@ -1,6 +1,6 @@
 .programs__item {
   padding-left: 20px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 }
 
 .programs__label {
@@ -9,7 +9,7 @@
 }
 
 .programs__label span {
-  padding-left: 16px;
+  padding-left: 14px;
 }
 
 .programs__label input {
@@ -27,7 +27,17 @@
 
 @media (min-width: 768px) {
   .programs__item {
+    padding-bottom: 11px;
     padding-left: 0;
+  }
+
+  .programs__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .programs__label span {
+    padding-left: 17px;
   }
 }
 
