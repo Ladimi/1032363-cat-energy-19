@@ -3,14 +3,15 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 135px;
+  margin-bottom: 31px;
 
-  width: 320px;
-  height: 305px;
-
-  background-color: #63a837;
+  background-color: #ffffff;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
+
+.index-wrapper {
+  width: 320px;
 }
 
 .index__title,
@@ -23,13 +24,13 @@
 }
 
 .index__title {
-  padding-top: 30px;
+  margin-top: 26px;
   font-size: 36px;
   line-height: 36px;
 }
 
 .index__description {
-  margin-top: 19px;
+  margin-top: 25px;
 
   font-size: 14px;
   line-height: 14px;
@@ -38,16 +39,17 @@
 }
 
 .index__image {
-  padding-top: 32px;
+  margin-top: 29px;
+  margin-bottom: 6px;
+  margin-left: 20px;
 }
 
 .index .index__button {
   margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 3px;
-  padding-top: 14px;
+  margin-right: 19px;
+  padding-top: 10px;
   padding-right: 73px;
-  padding-bottom: 11px;
+  padding-bottom: 9px;
   padding-left: 73px;
 
   font-size: 14px;
@@ -60,23 +62,36 @@
 @media (min-width: 768px) {
   .index {
     align-items: flex-start;
+    padding-bottom: 520px;
+    margin-bottom: 12px;
+
     width: 709px;
-    padding-bottom: 498px;
-    margin-bottom: 0;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: bottom;
-    background-size: 709px 609px;
+
+    background-image: none;
     background-color: #ffffff;
   }
 
+  .index-wrapper {
+    width: 708px;
+  }
+
   .index__image {
-    display: none;
+    position: absolute;
+    top: 303px;
+    left: 8px;
+    z-index: 0;
+
+    width: 709px;
+    height: auto;
   }
 
   .index__title {
     padding-top: 0;
-    margin-right: 135px;
+    margin-top: 0;
+    margin-right: 156px;
     margin-left: 90px;
+
+    z-index: 1;
 
     font-size: 60px;
     line-height: 60px;
@@ -85,8 +100,9 @@
   }
 
   .index__description {
-    margin-top: 30px;
-    padding-left: 88px;
+    margin-top: 39px;
+    margin-bottom: 63px;
+    margin-left: 93px;
 
     font-size: 20px;
     line-height: 20px;
@@ -95,12 +111,14 @@
   }
 
   .index .index__button {
-    margin-top: 48px;
-    margin-left: 89px;
-    padding-top: 17px;
-    padding-right: 29px;
-    padding-bottom: 15px;
+    position: relative;
+    margin-left: 94px;
+    padding-top: 11px;
+    padding-right: 23px;
+    padding-bottom: 10px;
     padding-left: 26px;
+
+    z-index: 1;
 
     font-size: 20px;
     line-height: 20px;
@@ -109,24 +127,39 @@
 
 @media (min-width: 1440px) {
   .index {
+    margin-top: 105px;
+    padding-bottom: 269px;
+    padding-left: 190px;
+
     width: 1440px;
-    padding-bottom: 304px;
-    padding-left: 185px;
-    background-image: url("../img/index-can-desktop@1x.png");
-    background-size: 552px 499px;
-    background-position: top center;
+
+    background-image: none;
+  }
+
+  .index__image {
+    position: absolute;
+    top: 83px;
+    left: 541px;
+
+    width: 552px;
+    height: auto;
   }
 
   .index__title {
     margin-left: 0;
-    margin-right: 868px;
   }
 
   .index__description {
+    margin-top: 40px;
+    margin-bottom: 68px;
+    margin-left: 0;
     padding-left: 0;
   }
 
   .index .index__button {
+    margin-top: 51px;
     margin-left: 0;
+    padding-left: 26px;
+    padding-right: 27px;
   }
 }
