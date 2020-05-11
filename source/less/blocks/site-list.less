@@ -50,7 +50,7 @@
         bottom: -3px;
         left: 0;
 
-        height: 3px;
+        height: 2px;
 
         background: #68b738;
       }
@@ -63,6 +63,14 @@
     padding-bottom: 8px;
 
     border-top: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .site-list__link--first {
@@ -81,15 +89,39 @@
     line-height: 25px;
     font-weight: normal;
     text-align: left;
-    color: #ffffff;
+  }
+
+  .site-list__item--active-index::after {
+    content: "";
+
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+
+        height: 2px;
+
+        background: #ffffff;
   }
 
   .site-list__item--active::after {
-    left: -5px;
+    left: -10px;
   }
 
   .site-list__link {
     border-top: none;
+  }
+
+  .site-list__link-index {
+    color: #ffffff;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .site-list__link--first {

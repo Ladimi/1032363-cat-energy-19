@@ -16,6 +16,19 @@
 
   border: 1px solid #cdcdcd;
   opacity: 0.5;
+  outline: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    border: 2px solid #444444;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
 }
 
 .animal__input--name {
@@ -68,18 +81,26 @@ input[type="number"] {
 }
 
 @media (min-width: 1440px) {
+  .animal__item {
+    margin-top: 0;
+  }
+
+  .animal__input {
+    padding-bottom: 8px;
+  }
+
   .animal:first-child .animal__input {
-    min-width: 478px;
+    min-width: 477px;
     margin-left: 16px;
   }
 
   .animal .animal__item:nth-child(2) .animal__input {
-    min-width: 452px;
+    min-width: 451px;
     margin-left: 19px;
   }
 
   .animal .animal__item:last-child .animal__input {
-    min-width: 411px;
+    min-width: 410px;
     margin-left: 17px;
   }
 

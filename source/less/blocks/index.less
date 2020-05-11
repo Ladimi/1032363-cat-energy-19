@@ -8,6 +8,11 @@
   background-color: #ffffff;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .index-wrapper {
@@ -42,6 +47,10 @@
   margin-top: 29px;
   margin-bottom: 6px;
   margin-left: 20px;
+}
+
+.index__image-background {
+  display: none;
 }
 
 .index .index__button {
@@ -127,13 +136,17 @@
 
 @media (min-width: 1440px) {
   .index {
-    margin-top: 105px;
-    padding-bottom: 269px;
+    margin-top: 607px;
+    padding-bottom: 38px;
     padding-left: 190px;
 
     width: 1440px;
 
     background-image: none;
+  }
+
+  .index-wrapper {
+    margin-top: -503px;
   }
 
   .index__image {
@@ -143,6 +156,14 @@
 
     width: 552px;
     height: auto;
+  }
+
+  .index__image-background {
+    display: block;
+    position: absolute;
+    top: -29px;
+    right: 0;
+    z-index: -1;
   }
 
   .index__title {
