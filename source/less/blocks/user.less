@@ -43,6 +43,10 @@
   &:invalid {
     border: 2px solid #ff8282
   }
+
+  &:invalid + svg {
+    fill: #ff8282;
+  }
 }
 
 .user__input--mail {
@@ -67,12 +71,9 @@
   height: 14px;
 }
 
-.user__item--mail:active .user__image {
+.user__item--mail:active .user__image,
+.user__item--phone:active .user__image {
   fill: #68b738;
-}
-
-.user__item--mail:invalid .user__image {
-  fill: #ff8282;
 }
 
 .user__item--phone {
@@ -83,6 +84,9 @@
   position: absolute;
   top: 27px;
   left: 247px;
+
+  width: 21px;
+  height: 21px;
 }
 
 .user__input--phone {
