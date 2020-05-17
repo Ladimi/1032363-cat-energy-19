@@ -8,6 +8,11 @@
   background-color: #ffffff;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .index-wrapper {
@@ -44,6 +49,10 @@
   margin-left: 20px;
 }
 
+.index__image-background {
+  display: none;
+}
+
 .index .index__button {
   margin-left: 20px;
   margin-right: 19px;
@@ -63,9 +72,7 @@
   .index {
     align-items: flex-start;
     padding-bottom: 520px;
-    margin-bottom: 12px;
-
-    width: 709px;
+    margin-bottom: 24px;
 
     background-image: none;
     background-color: #ffffff;
@@ -77,7 +84,7 @@
 
   .index__image {
     position: absolute;
-    top: 303px;
+    top: 313px;
     left: 8px;
     z-index: 0;
 
@@ -87,9 +94,9 @@
 
   .index__title {
     padding-top: 0;
-    margin-top: 0;
-    margin-right: 156px;
-    margin-left: 90px;
+    margin-top: 4px;
+    margin-right: 85px;
+    margin-left: 119px;
 
     z-index: 1;
 
@@ -102,7 +109,7 @@
   .index__description {
     margin-top: 39px;
     margin-bottom: 63px;
-    margin-left: 93px;
+    margin-left: 119px;
 
     font-size: 20px;
     line-height: 20px;
@@ -112,10 +119,10 @@
 
   .index .index__button {
     position: relative;
-    margin-left: 94px;
+    margin-left: 119px;
     padding-top: 11px;
-    padding-right: 23px;
-    padding-bottom: 10px;
+    padding-right: 29px;
+    padding-bottom: 12px;
     padding-left: 26px;
 
     z-index: 1;
@@ -127,29 +134,56 @@
 
 @media (min-width: 1440px) {
   .index {
-    margin-top: 105px;
-    padding-bottom: 269px;
+    padding-bottom: 203px;
     padding-left: 190px;
 
-    width: 1440px;
+    background: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, white 50%, #64a83b 50%);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 720px 696px, 100% 100%;
+    background-position: 100% 0%;
+    margin-top: -168px;
+    margin-bottom: 80px;
 
-    background-image: none;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
+    }
+  }
+
+  .index-wrapper {
+    position: relative;
+    margin-top: 217px;
   }
 
   .index__image {
     position: absolute;
-    top: 83px;
-    left: 541px;
+    top: -38%;
+    left: 49%;
+
+    z-index: 0;
 
     width: 552px;
     height: auto;
   }
 
+  .index__image-background {
+    display: block;
+    position: absolute;
+    top: -29px;
+    right: 0;
+    z-index: -1;
+  }
+
   .index__title {
+    position: relative;
+    z-index: 2;
+    margin-right: 180px;
     margin-left: 0;
   }
 
   .index__description {
+    position: relative;
+    z-index: 2;
     margin-top: 40px;
     margin-bottom: 68px;
     margin-left: 0;

@@ -1,13 +1,22 @@
 .copyright {
-  margin-top: 19px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 16px;
 
   background-color: #f2f2f2;
+
+  &:hover {
+    .copyright__link {
+      color: #68b738;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
   margin: 0;
+  margin-right: 124px;
 
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -16,13 +25,29 @@
   color: #444444;
 }
 
+.copyright__link {
+  color: #666666;
+}
+
+.copyright__link img {
+  margin-top: -10px;
+}
+
 @media (min-width: 768px) {
   .copyright {
     margin-top: -7px;
   }
 
   .copyright-catalog {
-    margin-top: 5px;
+    margin-top: 7px;
+  }
+
+  .copyright__text {
+    margin-right: 0;
+  }
+
+  .copyright__link {
+    margin-left: 16px;
   }
 }
 
