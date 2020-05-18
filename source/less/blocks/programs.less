@@ -13,15 +13,15 @@
 }
 
 .programs__label span::before {
-    content: "";
+  content: "";
 
-    display: inline-block;
-    margin-right: 14px;
+  display: inline-block;
+  margin-right: 14px;
 
-    width: 30px;
-    height: 30px;
-    border: 1px solid #cdcdcd;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
 
   &:active {
     opacity: 0.3;
@@ -32,7 +32,7 @@
   border-color: #bababa;
 }
 
-.programs__label>input:checked+span::before {
+.programs__label > input:checked + span::before {
   background-image: url("../img/circle-green.svg");
   background-size: 12px 12px;
   background-repeat: no-repeat;
@@ -45,38 +45,20 @@
     padding-left: 0;
   }
 
-  .programs__label::before {
+  .programs__label span::before {
+    margin-right: 17px;
+
     width: 40px;
     height: 40px;
   }
 
-  .programs__label span {
-    padding-left: 17px;
-  }
-
-  .programs__item:first-child .programs__label::after {
-    left: 114px;
-
-    width: 18px;
-    height: 18px;
+  .programs__label > input:checked + span::before {
+    background-size: 18px 18px;
   }
 }
 
 @media (min-width: 1440px) {
   .programs__item {
     padding-bottom: 10px;
-  }
-
-  .programs__label::before {
-    content: "";
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #cdcdcd;
-    border-radius: 50%;
-  }
-
-  .programs__item:first-child .programs__label::after {
-    left: 801px;
   }
 }
