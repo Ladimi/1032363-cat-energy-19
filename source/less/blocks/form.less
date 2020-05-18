@@ -94,33 +94,31 @@
   text-transform: uppercase;
 }
 
-.form-extra__label span {
-  padding-left: 16px;
-}
-
 .form-extra__label input {
   display: none;
 }
 
-.form-extra__label::before {
+.form-extra__label span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.form-extra__label span::before {
   content: "";
 
   display: inline-block;
+  margin-right: 16px;
 
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
 }
 
-.form-extra__item:first-child .form-extra__label::before {
-  content: "";
+.form-extra__label span:hover::before {
+  border-color: #bababa;
+}
 
-  display: inline-block;
-
-  width: 30px;
-  height: 30px;
-  border: 1px solid #cdcdcd;
-
+.form-extra__label>input:checked+span::before {
   background-image: url("../img/icon-tick.svg");
   background-size: 22px 17px;
   background-repeat: no-repeat;
@@ -244,20 +242,15 @@
     line-height: 20px;
   }
 
-  .form-extra__label::before {
+  .form-extra__label span::before {
+    margin-right: 17px;
+
     width: 40px;
     height: 40px;
   }
 
-  .form-extra__item:first-child .form-extra__label::before {
-    width: 40px;
-    height: 40px;
-
+  .form-extra__label>input:checked+span::before {
     background-size: 21px 16px;
-  }
-
-  .form-extra__label span {
-    padding-left: 17px;
   }
 
   .form__required {
